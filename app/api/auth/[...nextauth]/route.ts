@@ -3,9 +3,7 @@ import { NextAuthOptions } from "next-auth";
 import { prisma } from "@/lib/prisma";
 import GithubProvider from "next-auth/providers/github";
 import NextAuth from "next-auth/next";
-
 const isProd = process.env.NODE_ENV === "production";
-
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,

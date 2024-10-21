@@ -1,4 +1,4 @@
-// File: D:\projects\website project\Final Projects\Code-Snippet\app\api\snippets\route.ts
+// File: D:\projects\website project\Final Projects\Code-Snippet\code-snippet-frontend\app\api\snippets\route.ts
 import * as entry from '../../../../../app/api/snippets/route.js'
 import type { NextRequest } from 'next/server.js'
 
