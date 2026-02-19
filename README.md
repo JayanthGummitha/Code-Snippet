@@ -1,16 +1,17 @@
-# CodeShare
+# code-snippet
 
 A beautiful code snippet sharing platform built with Next.js 14, featuring customizable themes, syntax highlighting, and seamless GitHub authentication.
 
 ## Features
 
-- **Beautiful Code Editor**: Powered by CodeMirror with syntax highlighting for 15+ languages
+- **Beautiful Code Editor**: Powered by CodeMirror with syntax highlighting for 15 languages
 - **Customizable Themes**: Choose from 7 pre-built gradient themes or create your own custom color combinations
 - **Rich Customization Options**:
-  - Multiple font families (Fira Code, JetBrains Mono, Inconsolata, Source Code Pro)
-  - Adjustable font sizes and padding
+  - Multiple font families (Fira Code, JetBrains Mono, Inconsolata, Source Code Pro, IBM Plex Mono)
+  - Adjustable font sizes and padding (16px, 32px, 64px, 128px)
   - Toggle line numbers
   - Custom gradient angles and grain effects
+  - RGB/HSL color mode selection
 - **User Authentication**: Secure GitHub OAuth integration via NextAuth.js
 - **Snippet Management**: Create, save, rename, and delete your code snippets
 - **View Tracking**: Monitor how many times your snippets have been viewed
@@ -29,21 +30,37 @@ A beautiful code snippet sharing platform built with Next.js 14, featuring custo
 - **State Management**: Zustand
 - **Animations**: Framer Motion
 - **Data Fetching**: SWR
+- **Image Export**: dom-to-image, file-saver
+- **Color Utilities**: chroma-js, react-colorful
 
 ## Supported Languages
 
-- TypeScript/JavaScript
-- Python
+- TypeScript
+- JavaScript
 - Java
-- C++
-- Rust
+- Kotlin
+- Ruby
+- CSS
+- HTML
 - PHP
-- SQL
-- HTML/CSS
+- Python
+- Markdown
+- Rust
+- C++
 - XML
 - JSON
-- Markdown
-- And more...
+- SQL
+
+## Supported Themes
+
+- Sky (Blue gradient)
+- Cotton Candy (Purple gradient)
+- Smoke (Cyan gradient)
+- Honey (Yellow-Orange gradient)
+- Jade (Teal-Green gradient)
+- Bubblegum (Pink-Magenta gradient)
+- Salem (Deep Purple gradient)
+- Custom (Create your own with color picker)
 
 ## Getting Started
 
@@ -57,8 +74,8 @@ A beautiful code snippet sharing platform built with Next.js 14, featuring custo
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/codeshare.git
-cd codeshare
+git clone https://github.com/yourusername/code-snippet.git
+cd code-snippet
 ```
 
 2. Install dependencies:
@@ -72,7 +89,7 @@ Create a `.env` file in the root directory:
 
 ```env
 # Database
-DATABASE_URL="postgresql://user:password@localhost:5432/codeshare?schema=public"
+DATABASE_URL="postgresql://user:password@localhost:5432/code-snippet?schema=public"
 
 # GitHub OAuth
 GITHUB_ID=your_github_client_id
