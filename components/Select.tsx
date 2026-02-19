@@ -17,10 +17,13 @@ interface SelectProps<T> {
   options: T[];
 }
 
-function ThemeBubble({ color }: { color: string }) {
+function ThemeBubble({ colors }: { colors: string[] }) {
   return (
     <span
-      className={clsx("block h-4 w-4 rounded-full bg-gradient-to-br", color)}
+      className="block h-4 w-4 rounded-full bg-gradient-to-br"
+      style={{
+        backgroundImage: `linear-gradient(to bottom right, ${colors[0]}, ${colors[1]})`,
+      }}
     />
   );
 }
@@ -48,7 +51,7 @@ export default memo(function Select<
       case "language":
         return <span>{(initialValue as LanguageDefinition).label}</span>;
       case "theme":
-        return <ThemeBubble color={(initialValue as ThemeDefinition).class} />;
+        return <ThemeBubble colors={(initialValue as ThemeDefinition).baseColors} />;
       case "font":
         return (
           <span
@@ -79,7 +82,7 @@ export default memo(function Select<
       case "theme":
         return (
           <>
-            <ThemeBubble color={(option as ThemeDefinition).class} />
+            <ThemeBubble colors={(option as ThemeDefinition).baseColors} />
             <span className="block truncate">
               {(option as ThemeDefinition).label}
             </span>
